@@ -7,15 +7,12 @@ import { useSelector } from "react-redux";
 function Header() {
   const [isLogedIn, setIsLogedIn] = useState(false);
   const navigate = useNavigate();
-
   const token = useSelector(state => state.auth.token)
-
   useEffect(() => {
     if (token) {
       setIsLogedIn(true);
     }
   }, [token]);
-
   const handelLogout = () => {
     signOut(auth);
     localStorage.removeItem("token");

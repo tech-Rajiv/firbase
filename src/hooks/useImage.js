@@ -27,7 +27,7 @@ function useImage() {
         "https://api.cloudinary.com/v1_1/dxigjknfu/image/upload",
         formData
       );
-      console.log(res);
+      //console.log(res);
       return res.data.secure_url;
     } catch (err) {
       console.error("Upload Error", err);

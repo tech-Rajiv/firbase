@@ -3,7 +3,7 @@ import FeedSkeleton from "./skeleton/feedSkeleton";
 import { useSelector } from "react-redux";
 function Feed() {
  const allFeed = useSelector(state => state.tweets.feed)
- console.log(allFeed,'all');
+console.log(allFeed,'all');
  const loading = useSelector(state => state.tweets.loading)
   return (
     <div className="min-h-[90vh]">

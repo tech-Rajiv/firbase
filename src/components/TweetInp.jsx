@@ -30,14 +30,17 @@ function TweetInp() {
     setLoading(true)
     try {
       const gotPostCloudinaryUrl = await uploadToCloudinary(postImage.image);
-      console.log(gotPostCloudinaryUrl);
+     // console.log(gotPostCloudinaryUrl);
       const querySnapshot = await addDoc(collection(db, "feed"), {
         author: user.email,
         tweet: input,
         createdAt: Date.now(),
         authorPhoto: user.photoURL,
         tweetImage: gotPostCloudinaryUrl,
+        comments:[],
+        likes:[]
       });
+      console.log('created user',querySnapshot);
       setShowMsg("tweet added Successfully.");
       resetMsg()
     } catch (error) {

@@ -76,8 +76,8 @@ function SingleFeed({ feed }) {
                 )}
               </div>
               <div className="likeComm mt-4 flex mb-3 gap-8 px-2">
-                <div className="like flex gap-2 cursor-pointer"><Heart  /> 0</div>
-                <div className="like flex gap-2 cursor-pointer"><MessageCircleMore /> 0</div>
+                <button onClick={()=>{}} className="like flex gap-2 cursor-pointer"><Heart  /> {tweet.likes.length}</button>
+                <button onClick={()=>{}} className="like flex gap-2 cursor-pointer"><MessageCircleMore /> {tweet.comments.length}</button>
               </div>
               <div className="icons"></div>
             </div>

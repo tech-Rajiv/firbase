@@ -19,7 +19,7 @@ function App() {
   useTweetAPI();
   onAuthStateChanged(auth, async (user) => {
     if (user) {
-      console.log("User is logged in:", user.email);
+     console.log("apprender", user.email);
       const token = await user.getIdToken();
       const minimalUser = {
         uid: user.uid,
